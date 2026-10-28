@@ -1,0 +1,48 @@
+name: Request a feature
+description: Something OrgKit should do that it does not do yet.
+title: "[Feature] "
+labels: ["feature"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Search the open issues first. If someone already asked for it, add a 👍 reaction there instead. Reactions decide what gets built next.
+        **This post is public.** Do not include org names or customer data.
+  - type: dropdown
+    id: tool
+    attributes:
+      label: Which tool?
+      options:
+        - Schema Atlas
+        - Automation Switch
+        - Profile Drift Console
+        - Chrome extension
+        - A new tool
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem would it solve?
+      description: Describe the task you are doing today and what makes it slow or hard.
+      placeholder: "We document our org for audits. I copy every field description from Object Manager by hand."
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would you like OrgKit to do?
+      placeholder: "Add the Description column to the Excel export."
+    validations:
+      required: true
+  - type: dropdown
+    id: role
+    attributes:
+      label: Your role
+      options:
+        - Admin
+        - Developer
+        - Consultant
+        - Architect
+        - Business analyst
+        - Other

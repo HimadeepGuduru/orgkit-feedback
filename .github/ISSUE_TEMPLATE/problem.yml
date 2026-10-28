@@ -1,0 +1,65 @@
+name: Report a problem
+description: Something broke, gave a wrong result, or looks wrong.
+title: "[Problem] "
+labels: ["problem"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **This post is public.** Do not include org names, record data, usernames, session IDs or screenshots with customer data.
+        Security issue? Do not post it here. See https://orgkit.dev/trust/#contact
+  - type: dropdown
+    id: where
+    attributes:
+      label: Where did it happen?
+      options:
+        - Website (orgkit.dev)
+        - Chrome extension
+    validations:
+      required: true
+  - type: dropdown
+    id: tool
+    attributes:
+      label: Which tool?
+      options:
+        - Schema Atlas
+        - Automation Switch
+        - Profile Drift Console
+        - Connecting / logging in
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: did
+    attributes:
+      label: What were you trying to do?
+      placeholder: "Export a data dictionary for 3 objects with the Validation rules sheet ticked."
+    validations:
+      required: true
+  - type: textarea
+    id: happened
+    attributes:
+      label: What happened?
+      description: Include the exact error message if there was one. Remove any org or user names from it.
+    validations:
+      required: true
+  - type: dropdown
+    id: env
+    attributes:
+      label: Org type
+      options:
+        - Sandbox
+        - Developer Edition
+        - Production
+        - Not sure
+  - type: input
+    id: version
+    attributes:
+      label: Extension version (if you use the extension)
+      description: chrome://extensions shows it under OrgKit.
+      placeholder: "0.3.0"
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and operating system
+      placeholder: "Chrome 130 on macOS"

@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Report a security issue privately
+    url: https://orgkit.dev/trust/#contact
+    about: Do not post security issues in public.
+  - name: Rate the Chrome extension
+    url: https://chromewebstore.google.com/detail/ankhhhoiodgbnjellnmmgcecfecagabe/reviews
+    about: A review on the Chrome Web Store helps other Salesforce people find OrgKit.
